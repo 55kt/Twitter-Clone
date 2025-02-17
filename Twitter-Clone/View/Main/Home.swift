@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Home: View {
+    // MARK: - Properties
+    
+    // MARK: - Body
     var body: some View {
         VStack {
             ZStack {
@@ -29,16 +32,38 @@ struct Home: View {
                         MessagesView()
                     }// Messages
                     
-                    Tab("Profile", systemImage: "person") {
-                        ProfileView()
-                    }// Profile
-                    
                 }// TabView
+                
+                // MARK: - Twitt Button
+                VStack {
+                    Spacer()
+                    
+                    HStack {
+                        Spacer()
+                        
+                        Button {
+                            // action
+                        } label: {
+                            Image("tweet")
+                                .renderingMode(.template)
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                                .padding()
+                                .background(Color("bg"))
+                                .foregroundStyle(.white)
+                                .clipShape(.circle)
+                        }// Button
+                    }// HStack
+                    .padding()
+                }// VStack
+                .padding(.bottom, 65)
+                
             }// ZStack
         }// VStack
     }// Body
 }// View
 
+// MARK: - Preview
 #Preview {
     Home()
 }
