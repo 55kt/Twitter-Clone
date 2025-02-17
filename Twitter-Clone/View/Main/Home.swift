@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Home: View {
     // MARK: - Properties
+    @State private var showCreateTweetSheet: Bool = false
     
     // MARK: - Body
     var body: some View {
@@ -34,31 +35,15 @@ struct Home: View {
                     
                 }// TabView
                 
-                // MARK: - Twitt Button
-                VStack {
-                    Spacer()
-                    
-                    HStack {
-                        Spacer()
-                        
-                        Button {
-                            // action
-                        } label: {
-                            Image("tweet")
-                                .renderingMode(.template)
-                                .resizable()
-                                .frame(width: 20, height: 20)
-                                .padding()
-                                .background(Color("bg"))
-                                .foregroundStyle(.white)
-                                .clipShape(.circle)
-                        }// Button
-                    }// HStack
-                    .padding()
-                }// VStack
-                .padding(.bottom, 65)
+                // MARK: - Tweet Button
+                TweetButtonView {
+                    self.showCreateTweetSheet.toggle()
+                }
                 
             }// ZStack
+            .sheet(isPresented: $showCreateTweetSheet) {
+                CreateTweetView()
+            }
         }// VStack
     }// Body
 }// View
