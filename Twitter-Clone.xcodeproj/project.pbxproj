@@ -21,6 +21,8 @@
 		4BE17ECD2D63B9E000CFF633 /* CreateTweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE17ECC2D63B9E000CFF633 /* CreateTweetView.swift */; };
 		4BE17ED12D63BE9800CFF633 /* MultilineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE17ED02D63BE9800CFF633 /* MultilineTextField.swift */; };
 		4BE17ED32D63C30B00CFF633 /* TweetButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE17ED22D63C30B00CFF633 /* TweetButtonView.swift */; };
+		4BE17ED52D63C8A000CFF633 /* TweetCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE17ED42D63C8A000CFF633 /* TweetCellView.swift */; };
+		4BE17ED72D64ECD900CFF633 /* BottomBarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE17ED62D64ECD900CFF633 /* BottomBarButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		4BE17ECC2D63B9E000CFF633 /* CreateTweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTweetView.swift; sourceTree = "<group>"; };
 		4BE17ED02D63BE9800CFF633 /* MultilineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextField.swift; sourceTree = "<group>"; };
 		4BE17ED22D63C30B00CFF633 /* TweetButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetButtonView.swift; sourceTree = "<group>"; };
+		4BE17ED42D63C8A000CFF633 /* TweetCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCellView.swift; sourceTree = "<group>"; };
+		4BE17ED62D64ECD900CFF633 /* BottomBarButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 		4BE17EAB2D63A56A00CFF633 /* Twitter-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				4BE17EAA2D63A56A00CFF633 /* Twitter_CloneApp.swift */,
+				4BE17EA92D63A56A00CFF633 /* ContentView.swift */,
 				4BE17EB42D63A61B00CFF633 /* Services */,
 				4BE17EB32D63A61400CFF633 /* Extensions */,
 				4BE17EB22D63A60E00CFF633 /* ViewModel */,
@@ -86,8 +92,6 @@
 				4BE17EB02D63A60000CFF633 /* Model */,
 				4BE17EA72D63A56A00CFF633 /* Preview Content */,
 				4BE17EA82D63A56A00CFF633 /* Assets.xcassets */,
-				4BE17EA92D63A56A00CFF633 /* ContentView.swift */,
-				4BE17EAA2D63A56A00CFF633 /* Twitter_CloneApp.swift */,
 			);
 			path = "Twitter-Clone";
 			sourceTree = "<group>";
@@ -197,6 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				4BE17EC22D63AB6000CFF633 /* FeedView.swift */,
+				4BE17ED42D63C8A000CFF633 /* TweetCellView.swift */,
+				4BE17ED62D64ECD900CFF633 /* BottomBarButtons.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -288,11 +294,13 @@
 				4BE17EAE2D63A56A00CFF633 /* ContentView.swift in Sources */,
 				4BE17EBF2D63A67900CFF633 /* Home.swift in Sources */,
 				4BE17ECB2D63AB9D00CFF633 /* AuthenticationView.swift in Sources */,
+				4BE17ED72D64ECD900CFF633 /* BottomBarButtons.swift in Sources */,
 				4BE17EC52D63AB6E00CFF633 /* SearchView.swift in Sources */,
 				4BE17EAF2D63A56A00CFF633 /* Twitter_CloneApp.swift in Sources */,
 				4BE17ED32D63C30B00CFF633 /* TweetButtonView.swift in Sources */,
 				4BE17ECD2D63B9E000CFF633 /* CreateTweetView.swift in Sources */,
 				4BE17EC72D63AB7C00CFF633 /* NotificationsView.swift in Sources */,
+				4BE17ED52D63C8A000CFF633 /* TweetCellView.swift in Sources */,
 				4BE17ED12D63BE9800CFF633 /* MultilineTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +435,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Twitter-Clone/Preview Content\"";
+				DEVELOPMENT_TEAM = QT3T249ZHN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -455,6 +464,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Twitter-Clone/Preview Content\"";
+				DEVELOPMENT_TEAM = QT3T249ZHN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
