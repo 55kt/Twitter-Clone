@@ -23,6 +23,8 @@
 		4BE17ED32D63C30B00CFF633 /* TweetButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE17ED22D63C30B00CFF633 /* TweetButtonView.swift */; };
 		4BE17ED52D63C8A000CFF633 /* TweetCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE17ED42D63C8A000CFF633 /* TweetCellView.swift */; };
 		4BE17ED72D64ECD900CFF633 /* BottomBarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE17ED62D64ECD900CFF633 /* BottomBarButtons.swift */; };
+		4BE17ED92D64F9D000CFF633 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE17ED82D64F9D000CFF633 /* SearchCell.swift */; };
+		4BE17EDB2D64FB1E00CFF633 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE17EDA2D64FB1E00CFF633 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		4BE17ED22D63C30B00CFF633 /* TweetButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetButtonView.swift; sourceTree = "<group>"; };
 		4BE17ED42D63C8A000CFF633 /* TweetCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCellView.swift; sourceTree = "<group>"; };
 		4BE17ED62D64ECD900CFF633 /* BottomBarButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarButtons.swift; sourceTree = "<group>"; };
+		4BE17ED82D64F9D000CFF633 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		4BE17EDA2D64FB1E00CFF633 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				4BE17ED02D63BE9800CFF633 /* MultilineTextField.swift */,
+				4BE17EDA2D64FB1E00CFF633 /* SearchBar.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				4BE17EC42D63AB6E00CFF633 /* SearchView.swift */,
+				4BE17ED82D64F9D000CFF633 /* SearchCell.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -289,9 +295,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BE17EC92D63AB8600CFF633 /* MessagesView.swift in Sources */,
+				4BE17ED92D64F9D000CFF633 /* SearchCell.swift in Sources */,
 				4BE17EC32D63AB6000CFF633 /* FeedView.swift in Sources */,
 				4BE17EC12D63A7F000CFF633 /* ProfileView.swift in Sources */,
 				4BE17EAE2D63A56A00CFF633 /* ContentView.swift in Sources */,
+				4BE17EDB2D64FB1E00CFF633 /* SearchBar.swift in Sources */,
 				4BE17EBF2D63A67900CFF633 /* Home.swift in Sources */,
 				4BE17ECB2D63AB9D00CFF633 /* AuthenticationView.swift in Sources */,
 				4BE17ED72D64ECD900CFF633 /* BottomBarButtons.swift in Sources */,

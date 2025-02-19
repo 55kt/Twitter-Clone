@@ -23,14 +23,14 @@ struct TweetCellView: View {
                     .clipShape(Circle())
                 
                 VStack(alignment: .leading, spacing: 10) {
-                    (
+                    HStack {
                         Text("Kush")
                             .fontWeight(.bold)
                             .foregroundStyle(.primary)
-                        +
+                        
                         Text("@kush_mush")
                             .foregroundStyle(.gray)
-                    )
+                    }// HStack
                     
                     Text(tweet)
                         .frame(maxHeight: 100, alignment: .top)
