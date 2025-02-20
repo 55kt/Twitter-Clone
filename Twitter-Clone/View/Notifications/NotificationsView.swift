@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct NotificationsView: View {
+    
+    // MARK: - Body
     var body: some View {
-        Text("Notifications View")
-    }
-}
+        VStack {
+            ScrollView {
+                ForEach(0..<9) { _ in
+                    NotificationCell()
+                }
+            }// ScrollView
+        }// VStack
+    }// Body
+}// View
 
+// MARK: - Preview
 #Preview {
     NotificationsView()
 }

@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct MessagesView: View {
+    
+    // MARK: - Body
     var body: some View {
-        Text("Messages View")
-    }
-}
+        VStack {
+            ScrollView {
+                ForEach(0..<9) { _ in
+                    MessageCell()
+                }// ForEach
+            }// ScrollView
+        }// VStack
+    }// Body
+}// View
 
+// MARK: - Preview
 #Preview {
     MessagesView()
 }
