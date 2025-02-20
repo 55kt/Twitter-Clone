@@ -14,10 +14,7 @@ struct MessageCell: View {
     // MARK: - Body
     var body: some View {
         VStack(alignment: .leading, spacing: nil) {
-            Rectangle()
-                .frame(width: width, height: 1, alignment: .center)
-                .foregroundStyle(.gray)
-                .opacity(0.3)
+            GrayLine()
             
             HStack {
                 Image("logo")

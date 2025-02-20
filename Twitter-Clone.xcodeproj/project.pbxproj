@@ -29,6 +29,9 @@
 		4BE17EDF2D6634BA00CFF633 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE17EDE2D6634BA00CFF633 /* Extensions.swift */; };
 		4BE17EE12D678C8C00CFF633 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE17EE02D678C8C00CFF633 /* NotificationCell.swift */; };
 		4BE17EE32D6792DE00CFF633 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE17EE22D6792DE00CFF633 /* MessageCell.swift */; };
+		4BE17EE52D6797DD00CFF633 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE17EE42D6797DD00CFF633 /* TopBar.swift */; };
+		4BE17EE82D67999100CFF633 /* GrayLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE17EE72D67999100CFF633 /* GrayLine.swift */; };
+		4BE17EEA2D679A8400CFF633 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE17EE92D679A8400CFF633 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,9 @@
 		4BE17EDE2D6634BA00CFF633 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4BE17EE02D678C8C00CFF633 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		4BE17EE22D6792DE00CFF633 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		4BE17EE42D6797DD00CFF633 /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
+		4BE17EE72D67999100CFF633 /* GrayLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayLine.swift; sourceTree = "<group>"; };
+		4BE17EE92D679A8400CFF633 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +103,12 @@
 			children = (
 				4BE17EAA2D63A56A00CFF633 /* Twitter_CloneApp.swift */,
 				4BE17EA92D63A56A00CFF633 /* ContentView.swift */,
-				4BE17EB42D63A61B00CFF633 /* Services */,
-				4BE17EB32D63A61400CFF633 /* Extensions */,
 				4BE17EB22D63A60E00CFF633 /* ViewModel */,
 				4BE17EB12D63A60900CFF633 /* View */,
 				4BE17EB02D63A60000CFF633 /* Model */,
+				4BE17EB42D63A61B00CFF633 /* Services */,
+				4BE17EB32D63A61400CFF633 /* Extensions */,
+				4BE17EE62D67996300CFF633 /* Components */,
 				4BE17EA72D63A56A00CFF633 /* Preview Content */,
 				4BE17EA82D63A56A00CFF633 /* Assets.xcassets */,
 			);
@@ -229,8 +236,18 @@
 			isa = PBXGroup;
 			children = (
 				4BE17EBE2D63A67900CFF633 /* Home.swift */,
+				4BE17EE42D6797DD00CFF633 /* TopBar.swift */,
+				4BE17EE92D679A8400CFF633 /* MainView.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		4BE17EE62D67996300CFF633 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4BE17EE72D67999100CFF633 /* GrayLine.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +330,7 @@
 				4BE17EC32D63AB6000CFF633 /* FeedView.swift in Sources */,
 				4BE17EC12D63A7F000CFF633 /* ProfileView.swift in Sources */,
 				4BE17EAE2D63A56A00CFF633 /* ContentView.swift in Sources */,
+				4BE17EE52D6797DD00CFF633 /* TopBar.swift in Sources */,
 				4BE17EDB2D64FB1E00CFF633 /* SearchBar.swift in Sources */,
 				4BE17EE12D678C8C00CFF633 /* NotificationCell.swift in Sources */,
 				4BE17EBF2D63A67900CFF633 /* Home.swift in Sources */,
@@ -324,7 +342,9 @@
 				4BE17ED32D63C30B00CFF633 /* TweetButtonView.swift in Sources */,
 				4BE17ECD2D63B9E000CFF633 /* CreateTweetView.swift in Sources */,
 				4BE17EC72D63AB7C00CFF633 /* NotificationsView.swift in Sources */,
+				4BE17EEA2D679A8400CFF633 /* MainView.swift in Sources */,
 				4BE17ED52D63C8A000CFF633 /* TweetCellView.swift in Sources */,
+				4BE17EE82D67999100CFF633 /* GrayLine.swift in Sources */,
 				4BE17ED12D63BE9800CFF633 /* MultilineTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
