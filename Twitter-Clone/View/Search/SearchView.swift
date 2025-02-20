@@ -9,8 +9,8 @@ import SwiftUI
 
 struct SearchView: View {
     // MARK: - Properties
-    @State private var text: String = ""
-    @State private var isEditing: Bool = false
+    @State var text = ""
+    @State var isEditing = false
     
     // MARK: - Body
     var body: some View {
@@ -18,12 +18,23 @@ struct SearchView: View {
             SearchBar(text: $text, isEditing: $isEditing)
                 .padding(.horizontal)
             
-            List(0..<9) { i in
-                
-                SearchCell(tag: "Hello", tweets: String(i))
-                
-            }// List
+            if !isEditing {
+                List(0..<9) { i in
+                    
+                    SearchCell(tag: "Hello", tweets: String(i))
+                    
+                }// List
+            }
+            else {
+                List(0..<9) { _ in
+                    SearchUserCell()
+                }
+            }// if - else
         }// VStack
+        .onTapGesture {
+            isEditing = false
+            UIApplication.shared.endEditing()
+        }// onTapGesture
     }// Body
 }// View
 
