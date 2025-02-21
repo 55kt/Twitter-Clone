@@ -9,13 +9,16 @@ import SwiftUI
 
 struct TopBar: View {
     // MARK: - Properties
+    @Binding var x: CGFloat
     
     // MARK: - Body
     var body: some View {
         VStack {
             HStack {
                 Button {
-                    // action
+                    withAnimation {
+                        x = 0
+                    }
                 } label: {
                     Image(systemName: "line.3.horizontal")
                         .font(.system(size: 24))
@@ -41,5 +44,5 @@ struct TopBar: View {
 
 // MARK: - Preview
 #Preview {
-    TopBar()
+    TopBar(x: .constant(0))
 }

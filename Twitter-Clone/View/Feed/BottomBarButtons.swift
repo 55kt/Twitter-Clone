@@ -35,8 +35,9 @@ struct BottomBarButtons: View {
             } label: {
                 Image("love")
                     .resizable()
+                    .renderingMode(.template)
                     .frame(width: 16, height: 16)
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.red)
             }
             
             Button {
