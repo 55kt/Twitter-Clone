@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B6A7EE32D6B4A2200A35114 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A7EE22D6B4A2200A35114 /* TabButton.swift */; };
 		4BC58EF92D690308001B28DB /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC58EF82D690308001B28DB /* BlurView.swift */; };
 		4BE17EAC2D63A56A00CFF633 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BE17EA62D63A56A00CFF633 /* Preview Assets.xcassets */; };
 		4BE17EAD2D63A56A00CFF633 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BE17EA82D63A56A00CFF633 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B6A7EE22D6B4A2200A35114 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		4BC58EF82D690308001B28DB /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		4BE17E952D63A46100CFF633 /* Twitter-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twitter-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE17EA62D63A56A00CFF633 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				4BE17EDA2D64FB1E00CFF633 /* SearchBar.swift */,
 				4BE17EED2D679E8A00CFF633 /* FollowView.swift */,
 				4BE17EEF2D67A6DA00CFF633 /* MenuButton.swift */,
+				4B6A7EE22D6B4A2200A35114 /* TabButton.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				4BE17EDB2D64FB1E00CFF633 /* SearchBar.swift in Sources */,
 				4BE17EE12D678C8C00CFF633 /* NotificationCell.swift in Sources */,
 				4BE17EBF2D63A67900CFF633 /* Home.swift in Sources */,
+				4B6A7EE32D6B4A2200A35114 /* TabButton.swift in Sources */,
 				4BE17EDD2D66323500CFF633 /* SearchUserCell.swift in Sources */,
 				4BE17EEE2D679E8A00CFF633 /* FollowView.swift in Sources */,
 				4BE17ECB2D63AB9D00CFF633 /* AuthenticationView.swift in Sources */,

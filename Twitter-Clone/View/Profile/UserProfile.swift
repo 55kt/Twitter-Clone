@@ -11,6 +11,9 @@ struct UserProfile: View {
     // MARK: - Properties
     @State private var offset: CGFloat = 0
     @State private var titleOffset: CGFloat = 0
+    @State private var currentTab = "Tweets"
+    @Namespace var animation
+    @State private var tabBarOffset: CGFloat = 0
     
     // MARK: - Body
     var body: some View {
@@ -24,6 +27,7 @@ struct UserProfile: View {
                     }// DispatchQueue
                     
                     return AnyView(
+                        // MARK: - Banner
                         ZStack {
                             Image("banner")
                                 .resizable()
@@ -54,6 +58,7 @@ struct UserProfile: View {
                 .frame(height: 180)
                 .zIndex(1)
                 
+                // MARK: - Profile Photo
                 VStack {
                     HStack {
                         Image("logo")
@@ -62,12 +67,13 @@ struct UserProfile: View {
                             .frame(width: 75, height: 75)
                             .clipShape(Circle())
                             .padding(8)
-                            .background(Color.white)
+                            .background(Color.white.clipShape(Circle()))
                             .offset(y: offset < 0 ? getOffset() - 20 : -20)
                             .scaleEffect(getScale())
                         
                         Spacer()
                         
+                        // MARK: - Edit button
                         Button {
                             // action
                         } label: {
@@ -75,11 +81,12 @@ struct UserProfile: View {
                                 .padding(.vertical, 10)
                                 .padding(.horizontal)
                                 .background(Capsule().stroke(Color.accent, lineWidth: 1.5))
-                        }
+                        }// Button
                     }// HStack
                     .padding(.top, -25)
                     .padding(.bottom, -10)
                     
+                    // MARK: - Profile Bio
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Kush")
                             .font(.title2)
@@ -107,6 +114,46 @@ struct UserProfile: View {
                                 .foregroundStyle(.gray)
                         }// HStack
                     }// VStack
+                    .overlay(
+                        GeometryReader { proxy -> Color in
+                            let minY = proxy.frame(in: .global).minY
+                            
+                            DispatchQueue.main.async {
+                                self.titleOffset = minY
+                            }
+                            
+                            return Color.clear
+                        }// GeometryReader
+                        .frame(width: 0, height: 0), alignment: .top
+                    )// overlay
+                    VStack(spacing: 0) {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 0) {
+                                TabButton(title: "Tweets", currentTab: $currentTab, animation: animation)
+                                TabButton(title: "Tweets & Replies", currentTab: $currentTab, animation: animation)
+                                TabButton(title: "Media", currentTab: $currentTab, animation: animation)
+                                TabButton(title: "Likes", currentTab: $currentTab, animation: animation)
+                            }// HStack
+                        }// ScrollView
+                        
+                        Divider()
+                    }// VStack
+                    .padding(.top, 30)
+                    .background(Color.white)
+                    .offset(y: tabBarOffset < 90 ? tabBarOffset + 90 : 0)
+                    .overlay (
+                        GeometryReader { proxy -> Color in
+                            let minY = proxy.frame(in: .global).minY
+                            
+                            DispatchQueue.main.async {
+                                self.tabBarOffset = minY
+                            }// DispatchQueue
+                            return Color.clear
+                        }// GeometryReader
+                        .frame(width: 0, height: 0)
+                        ,alignment: .top
+                    )// overlay
+                    .zIndex(1)
                 }// VStack
             }// VStack
         }// ScrollView
