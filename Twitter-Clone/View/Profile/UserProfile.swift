@@ -32,11 +32,11 @@ struct UserProfile: View {
                             Image("banner")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: UIScreen.main.bounds.width, height: minY > 0 ? 180 + minY : 180, alignment: .center)
+                                .frame(width: getRect().width, height: minY > 0 ? 180 + minY : 180, alignment: .center)
                                 .clipShape(RoundedRectangle(cornerRadius: 0))
                             
                             BlurView()
-                                .opacity(blueViewOpacity())
+                                .opacity(blurViewOpacity())
                             
                             VStack(spacing: 5) {
                                 Text("Kush")
@@ -46,14 +46,14 @@ struct UserProfile: View {
                                 Text("231 Tweets")
                                     .foregroundStyle(.white)
                             }// VStack
-                            .offset(y: 120)
+                            .offset(y: 125)
                             .offset(y: titleOffset > 100 ? 0 : -getTitleOffset())
                             .opacity(titleOffset < 100 ? 1 : 0)
                         }// ZStack
-                        .clipped()
-                        .frame(height: minY > 0 ? 180 + minY : nil)
-                        .offset(y: minY > 0 ? -minY : -minY < 80 ? 0 : -minY - 80)
-                    )
+                            .clipped()
+                            .frame(height: minY > 0 ? 180 + minY : nil)
+                            .offset(y: minY > 0 ? -minY : -minY < 80 ? 0 : -minY - 80)
+                    )// return AnyView
                 }// GeometryReader
                 .frame(height: 180)
                 .zIndex(1)
@@ -124,8 +124,9 @@ struct UserProfile: View {
                             
                             return Color.clear
                         }// GeometryReader
-                        .frame(width: 0, height: 0), alignment: .top
+                            .frame(width: 0, height: 0), alignment: .top
                     )// overlay
+                    // MARK: - Tab Buttons Section
                     VStack(spacing: 0) {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 0) {
@@ -140,27 +141,49 @@ struct UserProfile: View {
                     }// VStack
                     .padding(.top, 30)
                     .background(Color.white)
-                    .offset(y: tabBarOffset < 90 ? tabBarOffset + 90 : 0)
+                    .offset(y: tabBarOffset < 90 ? -tabBarOffset + 90 : 0)
                     .overlay (
-                        GeometryReader { proxy -> Color in
-                            let minY = proxy.frame(in: .global).minY
+                        
+                        GeometryReader { reader -> Color in
+                            let minY = reader.frame(in: .global).minY
                             
                             DispatchQueue.main.async {
                                 self.tabBarOffset = minY
                             }// DispatchQueue
                             return Color.clear
                         }// GeometryReader
-                        .frame(width: 0, height: 0)
+                            .frame(width: 0, height: 0)
                         ,alignment: .top
+                        
                     )// overlay
                     .zIndex(1)
+                    
+                    VStack(spacing: 18) {
+                        
+                        // Sample Tweets...
+                        TweetCellView(tweet: "Hey Kush, are those regular glasses? Tell us please true if you can !", tweetImage: "post")
+                        
+                        Divider()
+                        
+                        ForEach(1...20,id: \.self){_ in
+                            
+                            TweetCellView(tweet: sampleText)
+                            
+                            Divider()
+                        }// ForEach
+                    }// VStack
+                    .padding(.top)
+                    .zIndex(0)
                 }// VStack
+                .padding(.horizontal)
+                .zIndex(-offset > 80 ? 0 : 1)
             }// VStack
         }// ScrollView
+        .ignoresSafeArea(.all, edges: .top)
     }// Body
     
     // MARK: - Methods
-    func blueViewOpacity() -> Double {
+    func blurViewOpacity() -> Double {
         let progress = -(offset + 80) / 150
         return Double(-offset > 80 ? progress : 0)
     }
