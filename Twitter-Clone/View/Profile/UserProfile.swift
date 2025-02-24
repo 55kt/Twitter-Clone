@@ -126,6 +126,7 @@ struct UserProfile: View {
                         }// GeometryReader
                             .frame(width: 0, height: 0), alignment: .top
                     )// overlay
+                    
                     // MARK: - Tab Buttons Section
                     VStack(spacing: 0) {
                         ScrollView(.horizontal, showsIndicators: false) {
@@ -158,6 +159,7 @@ struct UserProfile: View {
                     )// overlay
                     .zIndex(1)
                     
+                    // MARK: - Tweet List
                     VStack(spacing: 18) {
                         
                         // Sample Tweets...
